@@ -1,0 +1,109 @@
+body {
+  background-color: #f0eeed;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+}
+
+h1 {
+  color: #332c39;
+  font-family: "Dancing Script", cursive;
+}
+
+h2 {
+  color: #332c39;
+  font-family: "Dancing Script", cursive;
+}
+
+p {
+  color: #609ea2;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.row {
+  align-items: center;
+  margin: 0;
+}
+
+header {
+  align-items: center;
+  background-color: #332c39;
+  color: #f0eeed;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+header input {
+  background-color: #332c39;
+  border: none;
+}
+
+header input:focus {
+  color: #609ea2;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+}
+
+.note {
+  background-color: #f0eeed;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px #0000001f;
+  padding: 10px 20px 20px;
+  margin: 25px;
+}
+
+.create-note {
+  background-color: #f0eeed;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px #0000001f;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  padding: 10px 20px 40px;
+  width: 50%;
+}
+
+.create-note button {
+  position: relative;
+  background-color: inherit;
+  float: right;
+  margin-right: 10px;
+  color: #332c39;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 10px 10px 10px #0000001f;
+}
+
+.create-note button:hover {
+  background-color: inherit;
+  color: #c92c6d;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 0;
+}
+
+.delete-button {
+  border: none;
+  color: #609ea267;
+
+}
+
+.delete-button:hover {
+  color: #c92c6d;
+  
+}
