@@ -25,7 +25,7 @@ const StyleSearchBar = styled(TextField)({
 });
 
 function SearchBar(props) {
-  const { query } = props;
+  const { query, value } = props;
 
   function handleChange(event) {
     const { value } = event.target;
@@ -44,6 +44,7 @@ function SearchBar(props) {
           id="outlined-basic"
           variant="outlined"
           onChange={handleChange}
+          value={value}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
