@@ -8,10 +8,10 @@ function NotesContainer(props) {
       <div className="row">
         {notes.map((note) => {
           return (
-            <div className="col-lg-4 col-md-6" key={note.id}>
+            <div className="col-lg-4 col-md-6" key={note.title}>
               <div className="note">
                 <h2>
-                  {note.id}. {note.title}
+                  {note.title}
                 </h2>
                 <p>{note.content}</p>
                 <div className="buttons"><button className="delete-button"><ClearRoundedIcon fontSize="small"/></button></div>
