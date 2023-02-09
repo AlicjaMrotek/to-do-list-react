@@ -30,7 +30,6 @@ function SearchBar(props) {
   function handleChange(event) {
     const { value } = event.target;
     query(value);
-
   }
 
   return (

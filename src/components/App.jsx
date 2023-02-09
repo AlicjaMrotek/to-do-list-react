@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import CreateNote from "./CreateNote";
 import NotesContainer from "./NotesContainer";
 import SearchBar from "./SearchBar";
-// import notes from "../notes";
+import defaultNotes from "../defaultNotes";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(defaultNotes);
 
   function addNewNote(newNote) {
     setNotes((prev) => [...prev, newNote]);
@@ -32,11 +32,18 @@ function App() {
       : setResults(notes);
   }, [searchQuery, notes]);
 
+
+  function deleteNote(id) {
+    setNotes(prevNotes => prevNotes.filter((note, index)=>{
+      return index !== id
+    }));
+  };
+
   return (
     <div>
       <SearchBar query={handleSearch} value={searchQuery} />
       <CreateNote newEntry={addNewNote} />
-      <NotesContainer notes={results} />
+      <NotesContainer notes={results} delNote={deleteNote}/>
     </div>
   );
 }
