@@ -5,12 +5,13 @@ import React, { useState } from "react";
 function CreateNote(props) {
   const { newEntry } = props;
 
+  //1. Use State dla kliknięcia okienka 'Create note...' - rozsuwanie
   const [isClicked, setIsClicked] = useState(false);
-
   function handleClick() {
     setIsClicked(true);
   }
 
+  //2. Use State dla utworzenia nowego wpisu
   const [entry, setEntry] = useState({
     title: "",
     content: "",
@@ -26,12 +27,21 @@ function CreateNote(props) {
     });
   }
 
+  //3. Funkcja po kliknięciu buttona "+"
   function addNote() {
+    //3.1 Wywołanie funkcji z App:
     newEntry(entry);
+    //function addNewNote(newNote) {
+    //  setNotes((prev) => [...prev, newNote]);
+    //}
+
+    //3.2 Wyzerowanie formularza
     setEntry({
       title: "",
       content: "",
     });
+
+    //3.3 Schowanie formularza
     setIsClicked(false);
   }
 

@@ -4,10 +4,17 @@ import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
 function NotesContainer(props) {
   const { notes, delNote } = props;
 
+  //1. Funkcja po kliknięciu delete buttona
   function handleClick(id) {
+    //1.1 Odpalenie funckji z App 
     delNote(id);
+    // function deleteNote(id) {
+    //   setNotes(prevNotes => prevNotes.filter((note, index)=>{
+    //     return index !== id
+    //   }));
+    // };
   };
-
+  
   return (
     <div className="container-fluid">
       <div className="row">
@@ -25,7 +32,7 @@ function NotesContainer(props) {
               </div>
             </div>
           );
-        })}
+        }).reverse()}
       </div>
     </div>
   );

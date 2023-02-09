@@ -5,20 +5,27 @@ import SearchBar from "./SearchBar";
 import defaultNotes from "../defaultNotes";
 
 function App() {
+
+  //1. Ustawienie arraya z notatkami
   const [notes, setNotes] = useState(defaultNotes);
 
+  //2. Dodawanie notatki; Funkcja przekazywana do komponentu CreateNote
   function addNewNote(newNote) {
     setNotes((prev) => [...prev, newNote]);
   }
-
-  const [results, setResults] = useState(notes);
-
+  //3. Wyszukiwanie:  
+  ////3.1 Use State dla wpisywanego zapytania
   const [searchQuery, setSearchQuery] = useState("");
 
+  ////3.2 Use State dla wyników wyszukiwania
+  const [results, setResults] = useState(notes);
+
+  ////3.3 Funkcja przekazywana do komponentu SearchBar
   function handleSearch(queryText) {
     setSearchQuery(queryText);
   }
 
+  ////3.4 Ustawienie setResultsów wyszukiwania za każdym razem kiedy nastąpi zmiana 'searchQuery' lub 'notes'
   useEffect(() => {
     searchQuery.length !== 0
       ? setResults(() =>
@@ -32,7 +39,7 @@ function App() {
       : setResults(notes);
   }, [searchQuery, notes]);
 
-
+  //4. Kasowanie notki; Funkcja przekazywana do komponentu NotesContainer
   function deleteNote(id) {
     setNotes(prevNotes => prevNotes.filter((note, index)=>{
       return index !== id

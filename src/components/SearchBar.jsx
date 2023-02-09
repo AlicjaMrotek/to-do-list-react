@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { InputAdornment, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+//1. Stylowanie inputa
 const StyleSearchBar = styled(TextField)({
   "& label.Mui-focused": {
     color: "#609EA2",
@@ -27,9 +28,15 @@ const StyleSearchBar = styled(TextField)({
 function SearchBar(props) {
   const { query, value } = props;
 
+  //2 Funkcja po wpisaniu w input zapytania
   function handleChange(event) {
+    //2.1 "Złapanie" stringa z inputów
     const { value } = event.target;
+    //2.2 Wywołanie funkcji z App:
     query(value);
+    // function handleSearch(queryText) {
+    //  setSearchQuery(queryText);
+    // }
   }
 
   return (
