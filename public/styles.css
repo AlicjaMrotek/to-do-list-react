@@ -1,21 +1,40 @@
 body {
   background-color: #f0eeed;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+  text-indent: 15px;
+  margin: 0;
+}
+
+h1, h2 {
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 5px 10px;
+
+
 }
 
 h1 {
-  color: #332c39;
+  color: #f0eeed;
   font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
 }
 
 h2 {
   color: #332c39;
   font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+
 }
 
 p {
   color: #609ea2;
   font-family: "Nanum Gothic", sans-serif;
+  line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0;
+  padding: 5px 10px;
 }
 
 .row {
@@ -42,21 +61,21 @@ header input:focus {
   color: #609ea2;
 }
 
-.container-fluid {
-  padding: 0;
-}
 
 .title {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  width: 180px;
+  width: 200px;
+  padding: 0;
 }
 
 .note {
   background-color: #f0eeed;
   border-radius: 30px;
   box-shadow: 10px 10px 10px #0000001f;
+  display: flex;
+  flex-direction: column;
   padding: 10px 20px 20px;
   margin: 25px;
 }
@@ -94,16 +113,16 @@ header input:focus {
 .buttons {
   display: flex;
   justify-content: flex-end;
-  margin: 20px 0 0;
+  margin: 0;
 }
 
-.delete-button {
+.update-button {
   border: none;
   color: #609ea267;
 
 }
 
-.delete-button:hover {
+.update-button:hover {
   color: #c92c6d;
   
 }

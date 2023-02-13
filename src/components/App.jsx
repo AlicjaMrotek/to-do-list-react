@@ -46,11 +46,20 @@ function App() {
     }));
   };
 
+  //5. Edycja notki; Funkcja przekazywana do komponentu Note
+  function editNote(id, newNote) {
+    setNotes(prevNotes => {
+      const newNotes = [...prevNotes];
+      newNotes[id] = newNote;
+      return newNotes;
+    })
+  }
+
   return (
     <div>
       <SearchBar query={handleSearch} value={searchQuery} />
       <CreateNote newEntry={addNewNote} />
-      <NotesContainer notes={results} delNote={deleteNote}/>
+      <NotesContainer notes={results} delNote={deleteNote} editNote={editNote}/>
     </div>
   );
 }

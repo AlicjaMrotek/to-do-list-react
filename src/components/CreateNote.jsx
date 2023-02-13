@@ -22,7 +22,7 @@ function CreateNote(props) {
     setEntry((prev) => {
       return {
         ...prev,
-        [name]: value,
+        [name]: value
       };
     });
   }
@@ -65,7 +65,7 @@ function CreateNote(props) {
         id="standard-textarea"
         label="Create a note"
         multiline
-        rows={isClicked && 4}
+        rows={isClicked ? 4 : 1}
         variant="standard"
         onClick={handleClick}
         onChange={handleChange}
